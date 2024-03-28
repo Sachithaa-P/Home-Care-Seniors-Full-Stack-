@@ -1,0 +1,335 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0%;
+}
+.bo 
+{
+  margin: 0;
+  background-image: url('https://www.miamiherald.com/latest-news/tmksni/picture276652891/alternates/FREE_1140/3%20Questions%20to%20Ask%20When%20Hiring%20a%20Home%20Care%20Provider.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1413px;
+  height: 700px;
+  margin-top: -40px;
+  overflow-y: hidden;
+}
+.overlay2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5); 
+	z-index: 0; 
+  }
+.forms {
+	display: flex;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+.form-wrapper {
+	animation: hideLayer .3s ease-out forwards;
+}
+
+.form-wrapper.is-active {
+	animation: showLayer .3s ease-in forwards;
+}
+
+@keyframes showLayer {
+	50% {
+		z-index: 1;
+	}
+	100% {
+		z-index: 1;
+	}
+}
+
+@keyframes hideLayer {
+	0% {
+		z-index: 1;
+	}
+	49.999% {
+		z-index: 1;
+	}
+}
+
+.switcher {
+	position: relative;
+	cursor: pointer;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0;
+	text-transform: uppercase;
+	font-family: inherit;
+	font-size: 16px;
+	margin-top: -65px;
+	letter-spacing: .5px;
+	color: #ffffff7b;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	transform: translateX(0);
+	transition: all .3s ease-out;
+}
+.form-wrapper.is-active .switcher-login {
+	color: #ffffff;
+	transform: translateX(90px);
+    font-size: 20px;
+}
+
+.form-wrapper.is-active .switcher-signup {
+	color: #ffffff;
+	transform: translateX(-90px);
+    font-size: 20px;
+	
+}
+.password-match-error {
+	color: red;
+	font-size: 14px;
+	margin-top: -10px; /* Adjust as needed */
+  }
+  
+.underline {
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	overflow: hidden;
+	pointer-events: none;
+	width: 100%;
+	height: 2px;
+}
+
+.underline::before {
+    content: '';
+	position: absolute;
+	top: 0;
+	left: inherit;
+	display: block;
+	width: inherit;
+	height: inherit;
+	background-color: currentColor;
+	transition: transform .2s ease-out;
+}
+
+.switcher-login .underline::before {
+	transform: translateX(101%);
+}
+
+.switcher-signup .underline::before {
+	transform: translateX(-101%);
+}
+
+.form-wrapper.is-active .underline::before {
+	transform: translateX(0);
+}
+
+.form {
+	overflow: hidden;
+	min-width: 260px;
+	margin-top: 50px;
+	padding: 30px 25px;
+    border-radius: 0px;
+	transform-origin: top;
+}
+
+.form-login {
+	animation: hideLogin .3s ease-out forwards;
+}
+
+.form-wrapper.is-active .form-login {
+	animation: showLogin .3s ease-in forwards;
+}
+
+@keyframes showLogin {
+	0% {
+		background: #d7e7f1;
+		transform: translate(40%, 10px);
+	}
+	50% {
+		transform: translate(0, 0);
+	}
+	100% {
+		background-color: #fff;
+		transform: translate(35%, -20px);
+	}
+}
+
+@keyframes hideLogin {
+	0% {
+		background-color: #fff;
+		transform: translate(35%, -20px);
+	}
+	50% {
+		transform: translate(0, 0);
+	}
+	100% {
+		background: #d7e7f1;
+		transform: translate(40%, 10px);
+	}
+}
+
+
+.form-signup {
+	animation: hideSignup .3s ease-out forwards;
+}
+
+.form-wrapper.is-active .form-signup {
+	animation: showSignup .3s ease-in forwards;
+}
+
+@keyframes showSignup {
+	0% {
+		background: #d7e7f1;
+		transform: translate(-40%, 10px) scaleY(.8);
+	}
+	50% {
+		transform: translate(0, 0) scaleY(.8);
+	}
+	100% {
+		background-color: #fff;
+		transform: translate(-35%, -20px) scaleY(1);
+	}
+}
+
+@keyframes hideSignup {
+	0% {
+		background-color: #ffffff;
+		transform: translate(-35%, -20px) scaleY(1);
+	}
+	50% {
+		transform: translate(0, 0) scaleY(.8);
+	}
+	100% {
+		background: #d7e7f1;
+		transform: translate(-40%, 10px) scaleY(.8);
+	}
+}
+
+.form fieldset {
+	position: relative;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	transition: all .3s ease-out;
+}
+
+.form-login fieldset {
+	transform: translateX(-50%);
+}
+
+.form-signup fieldset {
+	transform: translateX(50%);
+}
+
+.form-wrapper.is-active fieldset {
+	opacity: 1;
+	transform: translateX(0);
+	transition: opacity .4s ease-in, transform .35s ease-in;
+}
+
+.form legend {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+}
+
+.input-block {
+	margin-bottom: 20px;
+}
+
+.input-block label {
+	font-size: 14px;
+  color: #101010;
+}
+
+.input-block input {
+	display: block;
+	width: 100%;
+	margin-top: 8px;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-size: 15px;
+	line-height: 38px;
+	color: #000000b9;
+  background: #eef9fe;
+  border: 1px solid #cddbef;
+  border-radius: 2px;
+}
+
+.form [type='submit'] {
+	opacity: 0;
+	display: block;
+	min-width: 100px;
+	margin: 30px auto 10px;
+	font-size: 18px;
+	line-height: 20px;
+	border-radius: 25px;
+	border: none;
+	transition: all .3s ease-out;
+}
+
+.form-wrapper.is-active .form [type='submit'] {
+	opacity: 1;
+	transform: translateX(0);
+	transition: all .4s ease-in;
+}
+
+.btn-login {
+	background-color: #e82e19;
+    border: 2px solid black;
+    box-shadow: inset 0 0 0 2px #000000;
+	transform: translateX(-30%);
+	margin-top: 10px !important;
+}
+
+.btn-signup {
+	background-color: #e82e19;
+    border: 2px solid black;
+	box-shadow: inset 0 0 0 2px #000000;
+	transform: translateX(30%);
+    margin-top: 5px !important;
+}
+
+.btn-login,
+.btn-signup {
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.btn-login:hover,
+.btn-signup:hover {
+  background-color: #04b44e;
+}
+.requirement-list {
+	list-style: none;
+	margin-top: 10px;
+	margin-bottom: -33px;
+  }
+  
+  .requirement-list li {
+	display: flex;
+	align-items: center;
+	color: rgba(50, 53, 52, 0.756);
+  }
+  
+  .requirement-list li i {
+	margin-right: 5px;
+  }
+  
+  .requirement-list li span {
+	font-size: 14px;
+  }
+  
+  /* Hide list items by default */
+  .requirement-list li {
+	display: none;
+  }
+

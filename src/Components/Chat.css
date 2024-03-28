@@ -1,0 +1,86 @@
+.chatbot-body {
+  position: relative;
+}
+
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px; /* Adjust the width as needed */
+  height: 55px; /* Adjust the height as needed */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden; /* Ensure the image stays within the button */
+  z-index: 999; /* Set a high z-index to ensure the button is on top */
+}
+
+.chat-toggle img {
+  width: 100%; /* Make the image fill the button width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 80px; /* Adjust the distance from the bottom as needed */
+  right: 20px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-y: auto;
+  padding: 20px;
+  display: none; /* Initially hide the chat container */
+  z-index: 998; /* Set a z-index lower than the button */
+}
+
+.chatbot-container.show {
+  display: block; /* Show the chat container when 'show' class is present */
+}
+
+.chat-window {
+  display: flex;
+  flex-direction: column;
+}
+.bot{
+  color:rgb(255, 255, 255);
+  background-color: #e82e19;
+  border: none;
+}
+.bot:hover
+{
+  background-color: #04b44e;
+}
+.user-message {
+  align-self: flex-end;
+  background-color: #04b44e;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"].inn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+

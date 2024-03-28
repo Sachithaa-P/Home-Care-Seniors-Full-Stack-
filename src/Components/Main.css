@@ -1,0 +1,126 @@
+/* Main.css */
+
+.vid-container {
+    margin-top: -70px;
+    background-size: cover;
+  }
+
+
+  .overlay {
+    overflow-y: hidden;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity as needed */
+    z-index: 1; /* Ensure the overlay is above the video */
+  }
+  
+  .vid {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logo-container {
+    position: absolute;
+    width: 230px;
+    margin-top: -350px;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the logo is above the video */
+  }
+ 
+  .logo {
+    width: 300px; /* Adjust the size of your logo */
+    height: 330px;
+    margin-top: -150px;
+    margin-left: 650px;
+  }
+  
+  .logo-text {
+    color: #fff;
+    font-size: 18px;
+    width: 1000px;
+    margin-left: 340px;
+    text-align: center;
+    max-width: 1000px;
+  }
+  /* Main.css */
+
+#arrowAnim {
+    width: 100vw;
+    align-items: center;
+    margin-left: 670px;
+    padding-left: 100px;
+    margin-top: -50px;
+    margin-bottom: 200px;
+  }
+  
+  .arrow {
+    width: 50px; /* Adjust the size of the arrow */
+    height: 50px; /* Adjust the size of the arrow */
+    border: 5px solid; /* Adjust the thickness of the arrow */
+    border-color: white transparent transparent white; /* Change the color to white */
+    transform: rotate(45deg); /* Rotate the arrow by 45 degrees */
+  }
+  
+  .arrowSliding {
+    position: absolute;
+    -webkit-animation: slide 4s linear infinite;
+    animation: slide 4s linear infinite;
+  }
+  
+  .delay1 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  
+  .delay2 {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  
+  .delay3 {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+  
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(9px);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(-9px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+  }
+  
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(9px);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(-9px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+  }
+  
+  

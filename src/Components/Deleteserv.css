@@ -1,0 +1,75 @@
+.background {
+    position: relative;
+    background-image: url('https://www.homedoc.in/wp-content/uploads/2019/09/elderly-care-in-Gurgaon.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.635);
+    z-index: 1;
+}
+
+.booking-form {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.61);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.booking-form h2 {
+    margin-bottom: 20px;
+    color: black;
+    font-family: serif;
+}
+
+.booking-form label {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: serif;
+}
+
+.search {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 20px;
+}
+
+.search input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    height: 40px;
+    width: 200px; /* Adjust width as needed */
+}
+
+.search button {
+    padding: 8px 12px;
+    margin-top: -1px;
+    background-color: #e82e19;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 38px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #04b44e;
+}
